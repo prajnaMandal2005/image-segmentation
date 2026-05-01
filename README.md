@@ -3,7 +3,7 @@
 A Streamlit web app for image segmentation using Genetic Algorithm and Particle Swarm Optimization.
 
 ## 🚀 Live App
-[**Click here to open the app**](https://prajnamandal2005-image-segmentation.streamlit.app)
+[**Click here to open the app**](https://image-segmentation-jkeg2rcnfk6cqrms7jyjsf.streamlit.app/)
 
 ## Features
 - Auto K selection (Elbow method)
