@@ -185,8 +185,11 @@ if uploaded_image is not None:
         c2.image(pso_img, caption=f"PSO (time {pso_time:.2f}s)")
 
         # Downloads
-        st.download_button("Download GA Image", ga_img.tobytes(), "ga.png")
-        st.download_button("Download PSO Image", pso_img.tobytes(), "pso.png")
+        is_success, buffer = cv2.imencode(".png", cv2.cvtColor(ga_img, cv2.COLOR_RGB2BGR))
+        st.download_button("Download GA Image", buffer.tobytes(), "ga.png")
+
+        is_success, buffer = cv2.imencode(".png", cv2.cvtColor(pso_img, cv2.COLOR_RGB2BGR))
+        st.download_button("Download PSO Image", buffer.tobytes(), "pso.png")
 
         # -------------------------------
         # ACCURACY (if GT)
